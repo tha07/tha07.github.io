@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width">
   <style>
     body {
-      background: #0098ff;
+      background: green;
+	  background-image: url("bg.jpg");
       display: flex;
       height: 100vh;
       margin: 0;
@@ -19,24 +20,41 @@
       max-width: calc(50% - 100px);
       margin: 0 50px;
       box-sizing: border-box;
-      border-radius: 2px;
+      border-radius: 70px;
       padding: 0;
-      background: white;
+      background: grey;
     }
     .copy {
       position: fixed;
-      top: 10px;
+      bottom: 20%;
       left: 50%;
       transform: translateX(-50%);
       font-size: 16px;
       color: white;
     }
+	.copy2 {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      color: white;
+    }
+	
+	.titlos {
+      position: fixed;
+      top: 8%;
+      font-size: 32px;
+      color: white;
+    }
   </style>
 </head>
 <body>
-  <div class="copy">Send your URL to a friend to start a video call</div>
   <video id="localVideo" autoplay muted></video>
   <video id="remoteVideo" autoplay></video>
+  <div class="copy">Στείλε το URL ένα φίλο για να αρχίσετε τη συνομιλία!</div>
+   <div class="copy2">Δώσε πρόσβαση κάμερας και ήχου στον επιλεγμένο Browser</div>
+   <div class="titlos">Σύνδεση τύπου Peer-to-Peer με χρήση WebRTC</div>
   <script src="script.js"></script>
 </body>
 </html>
