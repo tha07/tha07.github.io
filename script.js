@@ -8,9 +8,21 @@ const roomHash = location.hash.substring(1);
 const drone = new ScaleDrone('2xmbUiTsqTzukyf7');
 // Room name needs to be prefixed with 'observable-'
 const roomName = 'observable-' + roomHash;
-const configuration = {
-  iceServers: [{ urls: ["stun:stun1.l.google.com:19302", "stun:stun.ooma.com:3478" ] }]
-};
+
+const configuration={iceServers: [
+    {
+      url: 'turn:numb.viagenie.ca',
+		credential: 'muazkh',
+		username: 'webrtc@live.com'
+    },
+    {
+      urls: "stun: stun1.l.google.com:19302"
+    }
+  ]};
+
+//const configuration = {
+  //iceServers: [{ urls: ["stun:stun1.l.google.com:19302", "stun:stun.ooma.com:3478" ,"turn:turn1.l.google.com:19302"] }]
+//};
 
 //const configuration = {
   //iceServers: [{
